@@ -15,6 +15,7 @@
 2. yarn install (since repo is forked)
 
 3. Login to Heroku in terminal (email & pwd)
+in terminak: ```heroku login -i```
 
 4. To create a deployment to Heroku:
 in terminal: heroku create <unique file name>
@@ -25,11 +26,14 @@ in terminal: heroku create <unique file name>
 ```web: node index.js``` into Procfile 
 6.1 Save Procfile
 **Heroku looks for this file for it to run**
+**It is not always an index.js file. It can be app.js** 
+**Depending on where the main app is run.**
 
 7. In package.json, under scripts include 
 ```"start":"node index.js"```
+**From above step, if main app in App.js, the change it to "node App.js"**
 
-8. Change the 3000 in port to ```process.env.PORT```
+8. Change the port 3000 to ```process.env.PORT```
 
 ### Ensure all project is working fine before deploying to Heroku
 Easier to debug in Dev env than debugging in Heroku

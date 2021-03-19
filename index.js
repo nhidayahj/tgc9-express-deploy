@@ -31,6 +31,10 @@ async function main() {
 main();
 
 // LISTEN
-app.listen(3000, ()=>{
+// app.listen(3000, ()=>{
+//     console.log("Express is running")
+// })
+
+app.listen(process.env.PORT, ()=>{
     console.log("Express is running")
 })
